@@ -1,7 +1,7 @@
+"use client";
 import { initializeApp } from 'firebase/app';
 import {addDoc, collection, deleteDoc, doc, getDocs, getFirestore } from 'firebase/firestore';
-// @ts-ignore
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react"
 
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
