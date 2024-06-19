@@ -5,12 +5,13 @@ import { addDoc, collection, deleteDoc, doc, getDocs, getFirestore } from 'fireb
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyCsP4G2Q3c-d8Xi6ngH8w0Y7AkFuvXJwRc",
+    authDomain: "unprojettest-cb8ed.firebaseapp.com",
+    projectId: "unprojettest-cb8ed",
+    storageBucket: "unprojettest-cb8ed.appspot.com",
+    messagingSenderId: "153996520538",
+    appId: "1:153996520538:web:4b586893b8b1ebb7ad7c63",
+    measurementId: "G-N9JYWTX36Q"
 };
 
 // Initialize Firebase
