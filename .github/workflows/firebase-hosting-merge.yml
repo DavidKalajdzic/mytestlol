@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UNPROJETTEST_CB8ED }}
           channelId: live
           projectId: unprojettest-cb8ed
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
