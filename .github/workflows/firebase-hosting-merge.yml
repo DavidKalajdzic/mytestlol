@@ -17,6 +17,6 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UNPROJETTEST_CB8ED }}
           channelId: live
-          projectId: unprojettest-cb8ed
+          projectId: deuxieme-projet-test
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
