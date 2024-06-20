@@ -3,24 +3,22 @@ import {useEffect, useState} from "react";
 import {initializeApp} from 'firebase/app';
 import {addDoc, collection, deleteDoc, doc, getDocs, getFirestore} from 'firebase/firestore';
 
-function getEnv(name) {
-    let val = process.env[name];
-    if ((val === undefined) || (val === null)) {
-        throw ("missing env var for " + name);
-    }
-    return val;
-}
-console.log(getEnv(NEXT_PUBLIC_COUCOU))
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: getEnv("NEXT_PUBLIC_API_KEY"),
-    authDomain: getEnv("NEXT_PUBLIC_AUTH_DOMAIN"),
-    projectId: getEnv("NEXT_PUBLIC_PROJECT_ID"),
-    storageBucket: getEnv("NEXT_PUBLIC_STORAGE_BUCKET"),
-    messagingSenderId: getEnv("NEXT_PUBLIC_MESSAGING_SENDER_ID"),
-    appId: getEnv("NEXT_PUBLIC_APP_ID"),
-    measurementId: getEnv("NEXT_PUBLIC_MEASUREMENT_ID")
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
+// assert env vars exist (firebaseConfig.apiKey)
+Object.keys(firebaseConfig).forEach(key => {
+    if (!firebaseConfig[key]) {
+        throw new Error(`Missing env var ${key}`);
+    }
+});
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
