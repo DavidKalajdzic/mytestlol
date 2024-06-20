@@ -64,7 +64,7 @@ jobs:
 
       - name: Set up Google Cloud credentials
         run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEUXIEME_PROJET_TEST }}" > $HOME/gcloud-service-key.json
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}" > $HOME/gcloud-service-key.json
         env:
           GOOGLE_APPLICATION_CREDENTIALS: $HOME/gcloud-service-key.json
 
@@ -74,6 +74,8 @@ jobs:
       - name: Deploy to Firebase Hosting, Firestore Rules, and Functions
         run: |
           npm install -g firebase-tools
+          firebase --version
+          cat $GOOGLE_APPLICATION_CREDENTIALS
           firebase deploy --only hosting,firestore:rules,firestore:indexes,functions --project ${{ env.FIREBASE_PROJECT_ID }}
         env:
           GOOGLE_APPLICATION_CREDENTIALS: $HOME/gcloud-service-key.json
