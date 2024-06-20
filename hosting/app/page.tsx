@@ -55,7 +55,7 @@ const TodoList = () => {
 
     return (
         <div>
-            <h1>DIFFERENT</h1>
+            <h1>QOOOOLLLL {process.env.NEXT_PUBLIC_COUCOU} {process.env.KIKI}</h1>
             <input
                 type="text"
                 value={newTodo}
