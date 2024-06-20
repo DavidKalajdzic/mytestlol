@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "deuxieme-projet-test"
+    "default": "unprojettest-cb8ed"
+    "deuxieme-projet-test": "deuxieme-projet-test",
+",
   }
 }
