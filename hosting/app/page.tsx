@@ -10,7 +10,7 @@ function getEnv(name) {
     }
     return val;
 }
-console.log(getEnv("NEXT_PUBLIC_COUCOU"))
+console.log(getEnv(NEXT_PUBLIC_COUCOU))
 // Firebase configuration
 const firebaseConfig = {
     apiKey: getEnv("NEXT_PUBLIC_API_KEY"),
