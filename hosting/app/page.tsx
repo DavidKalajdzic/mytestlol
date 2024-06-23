@@ -52,7 +52,7 @@ const TodoList = () => {
 
     return (
         <div>
-            <h1>QOOOOLLLL {process.env.NEXT_PUBLIC_PROJECT_ID} </h1>
+            <h1>QOOOOLLLL {process.env.NEXT_PUBLIC_PROJECT_ID} {process.env.NEXT_PUBLIC_KIKI} </h1>
             <input
                 type="text"
                 value={newTodo}
